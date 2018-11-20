@@ -1,0 +1,14 @@
+language: r
+warnings_are_errors: false
+cache:
+  packages: true
+script:
+  - bash script.sh
+deploy:
+  provider: pages
+  local_dir: _site/
+  github-token: $GITHUB_TOKEN
+    on:
+      branch: master
+notifications:
+  email: false
